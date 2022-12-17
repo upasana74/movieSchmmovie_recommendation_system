@@ -100,11 +100,7 @@ store the movie information and recommend movies to the user depending on the no
 
 1. The [IMDbPY API](https://pypi.org/project/IMDbPY/) is publicly available online and does not require any api key to activate it.
 2. The [OMDB API](https://www.omdbapi.com/) is also publicly available but you need to go to [this website](https://www.omdbapi.com/) and request 
-for an API key. Then you have to go to your mailbox to activate the key. You will need this key to use the omdb api to access movie data.
+    for an API key. Then you have to go to your mailbox to activate the key. You will need this key to use the omdb api to access movie data.
 3. [Kaggle dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) also has good metadata for movies.
 
 
-
-
-
--based on a graph based
