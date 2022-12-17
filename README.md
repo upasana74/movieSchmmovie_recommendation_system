@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ```
 
 ## Instructions on the options:
-1. Option 1: Search movie/tv shows:
+### Option 1: Search movie/tv shows:
 
 On selecting this option, you can enter a movie name, select a movie from the movie search results and view the following options:
 1. Movie year
@@ -60,7 +60,7 @@ On selecting this option, you can enter a movie name, select a movie from the mo
 8. short_Overview
 9. Summary plot
 
-2. Option 2: Search for the N top movies in a genre
+### Option 2: Search for the N top movies in a genre
 
 On selecting this option, you can select a genre from below to display howsoever many movies you want in that genre:
 1. Action
@@ -86,11 +86,11 @@ On selecting this option, you can select a genre from below to display howsoever
 
 You can also select a movie in the selection to display the movie details.
 
-3. Option 3: Search for the top N TV series for a genre
+### Option 3: Search for the top N TV series for a genre
 
 Similar to Option 2, but this is with TV series not movies as option 2
 
-4. Option 4: Movie recommendation on the basis of genre and IMDb rating
+### Option 4: Movie recommendation on the basis of genre and IMDb rating
 
 This is the part which makes use of the cached data in the file `top250movies.json`, hence the comparitively faster response time
 It asks for the genres and the IMDb rating you want and also the number of movies you want to be recommended. It uses a graph structure to 
