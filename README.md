@@ -1,5 +1,7 @@
 # Project Title: Movie Schmmovie 
-<img width="363" alt="Screen Shot 2022-12-17 at 04 42 22" src="https://user-images.githubusercontent.com/47816217/208235875-eb8264e8-b64d-44c6-9b9b-b2c664464e16.png">
+
+<img width="230" alt="Screen Shot 2022-12-17 at 05 05 06" src="https://user-images.githubusercontent.com/47816217/208236610-4d041f60-30d4-473b-94bc-99b04a69384e.png">
+
 
 MovieSchmmovie is an interactive graph-based IMDb based movie and TV series recommendation system. It is an user friendly console-based program to 
 recommend movies for a certain preference of movie/TV show genre and IMDb. To offer some flebility to the user, it also offers to choose from the following options:
