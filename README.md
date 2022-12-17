@@ -82,6 +82,26 @@ On selecting this option, you can select a genre from below to display howsoever
 19. War
 20. Western
 
+You can also select a movie in the selection to display the movie details.
+
+3. Option 3: Search for the top N TV series for a genre
+
+Similar to Option 2, but this is with TV series not movies as option 2
+
+4. Option 4: Movie recommendation on the basis of genre and IMDb rating
+
+This is the part which makes use of the cached data in the file `top250movies.json`, hence the comparitively faster response time
+It asks for the genres and the IMDb rating you want and also the number of movies you want to be recommended. It uses a graph structure to 
+store the movie information and recommend movies to the user depending on the node connections.
+
+### Accessing the APIs
+
+1. The [IMDbPY API](https://pypi.org/project/IMDbPY/) is publicly available online and does not require any api key to activate it.
+2. The [OMDB API](https://www.omdbapi.com/) is also publicly available but you need to go to [this website](https://www.omdbapi.com/) and request 
+for an API key. Then you have to go to your mailbox to activate the key. You will need this key to use the omdb api to access movie data.
+3. [Kaggle dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) also has good metadata for movies.
+
+
 
 
 
