@@ -7,7 +7,7 @@ MovieSchmmovie is an interactive graph-based IMDb based movie and TV series reco
 recommend movies for a certain preference of movie/TV show genre and IMDb. To offer some flexility to the user, it also offers to choose from the following options:
 
 1. Search for a movie by it's name 
-=======
+
 1. Search for a movie/TV series by it's name
 2. Search for the N top movies in a genre
 3. Search for the top N TV series for a genre
@@ -94,7 +94,7 @@ Similar to Option 2, but this is with TV series not movies as option 2
 
 ### Option 4: Movie recommendation on the basis of genre and IMDb rating
 
-This is the part which makes use of the cached data in the file `top250movies.json`, hence the comparitively faster response time
+This is the part which makes use of the cached data in the file `movies_cache.json`, hence the comparitively faster response time
 It asks for the genres and the IMDb rating you want and also the number of movies you want to be recommended. It uses a graph structure to 
 store the movie information and recommend movies to the user depending on the node connections.
 
