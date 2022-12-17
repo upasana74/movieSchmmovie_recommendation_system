@@ -103,4 +103,7 @@ store the movie information and recommend movies to the user depending on the no
     for an API key. Then you have to go to your mailbox to activate the key. You will need this key to use the omdb api to access movie data.
 3. [Kaggle dataset](https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset) also has good metadata for movies.
 
+### Option 5: Person search to view their image
+
+On selecting this option, you can type any person's name and select the person from the search results. On choosing a particular result, the picture of that personm pops up if it is in the IMDb database.
 
