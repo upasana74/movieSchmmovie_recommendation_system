@@ -98,7 +98,7 @@ Similar to Option 2, but this is with TV series not movies as option 2
 This is the part which makes use of the cached data in the file `top250movies.json`, hence the comparitively faster response time
 It asks for the genres and the IMDb rating you want and also the number of movies you want to be recommended. It uses a graph structure to 
 store the movie information and recommend movies to the user depending on the node connections.
->>>>>>> 666009c0417e4ca9c56d68d41e49d2f46ae3f29c
+
 
 ### Accessing the APIs
 
