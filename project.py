@@ -112,7 +112,7 @@ def scraping_from_imdbpy():
     moviesDB = imdb.IMDb()
     top_250_movies = moviesDB.get_top250_movies()
     top_250_movies_dict = {}
-    for i in range(5):
+    for i in range(len(top_250_movies)):
         title = top_250_movies[i]['title']
         year = top_250_movies[i]['year']
         rating = top_250_movies[i]['rating']
