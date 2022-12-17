@@ -94,6 +94,7 @@ def graph_implementation():
     inverse_genre_rating_node = invert_keys_values_dict(create_genre_rating_info_node())
 
     adj_list = create_adjacency_dict_child_nodes()
+    print(adj_list)
     active_list = []
     
     for gen in genre:
@@ -151,3 +152,4 @@ def graph_implementation():
             print("Wrong input!")
             continue
 
+graph_implementation()
