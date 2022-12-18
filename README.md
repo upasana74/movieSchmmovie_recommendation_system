@@ -132,9 +132,3 @@ Mapping example:
 6. Hence each of the movie nodes are connected to it’s genre nodes and imdb rating window nodes and vice versa.
 
 The rest of the details about the graph is present in the final project report.
-
-4. 
-
-
-
-
