@@ -71,7 +71,6 @@ def search_top_20_movies():
     movie = moviesDB.get_movie(f'{movie_id}')
     genres = ", ".join(movie['genre'])
     print(f"\033[7;1mGenre\033[0m: {genres}", end='\n\n')
-    # print(movie)
     print(f"\033[7;1mRating\033[0m: {movie['rating']}", end='\n\n')
     try:
         print(f"\033[7;1mRuntime\033[0m: {movie['runtimes'][0]} mins", end='\n\n')
