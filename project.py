@@ -24,7 +24,8 @@ def main():
     smiley_emoji = emoji.emojize(":grinning_face_with_big_eyes:")
     wave_hand_emoji = emoji.emojize("\U0001F44B")
     grinning_face = ("\U0001F606")
-    user_name = input(f"Hello, my name is Movie Schmmovie. It is a pleasure to meet you. May I ask your name? {smiley_emoji}")
+    print(f"\033[7;1mHello, my name is Movie Schmmovie. It is a pleasure to meet you. May I ask your name? {smiley_emoji}\033[0m", end='\n\n')
+    user_name = input(f"Enter your name: " )
     start_animations()
     load_animation(f"Hello {user_name} Let me get you started {grinning_face}")
     while True:
@@ -33,7 +34,8 @@ def main():
         for i in user_choice:
             print(f"{idx}) {i}")
             idx += 1
-        user_choice = int(input("What do you want to select from the options above? Enter an option from 1-5: "))
+        print(f"\033[7;1mWhat do you want to select from the options above? Choose an option from 1-5: \033[0m", end='\n\n')
+        user_choice = int(input("Enter an option from 1-5: "))
         if user_choice == 1:
             search_top_20_movies()
         elif user_choice == 2:
@@ -44,7 +46,8 @@ def main():
             graph_implementation()
         elif user_choice == 5:
             person_imdb()
-        continue_or_not = input("Do you want to continue? Enter yes or no: ")
+        print(f"\033[7;1mDo you want to continue? \033[0m", end='\n\n')
+        continue_or_not = input("Enter yes or no: ")
         if continue_or_not == "yes":
             continue
         else:
@@ -54,54 +57,57 @@ def main():
 
 def search_top_20_movies():
     moviesDB = imdb.IMDb()
-    movie_name = input("What is the movie/tv series name you want to search? ")
+    print(f"\033[7;1mWhat is the movie/tv series name you want to search? \033[0m", end='\n\n')
+    movie_name = input("Enter a name for the movie/tv search: ")
     movies = moviesDB.search_movie(movie_name)
     for idx, movie in enumerate(movies):
         title = movie["title"]
         print(f"{idx}: {title}")
-    user_choice = int(input(f"Which movie's details you want to look for? Enter 0-19 integer. "))
-    print(f"The details for {movies[user_choice]['title']} are as follows: ")
-    print(f"Year: {movies[user_choice]['year']}")
+    print(f"\033[7;1mWhich movie's details you want to look for? \033[0m", end='\n\n')
+    user_choice = int(input(f"Enter an integer in the range of 0-19 integer. "))
+    print(f"\033[7;1mThe details for {movies[user_choice]['title']} are as follows: \033[0m", end='\n\n')
+    print(f"\033[7;1mYear\033[0m: {movies[user_choice]['year']}", end='\n\n')
     movie_id = movies[user_choice].getID()
     movie = moviesDB.get_movie(f'{movie_id}')
     genres = ", ".join(movie['genre'])
-    print("Genre: ", genres)
+    print(f"\033[7;1mGenre\033[0m: {genres}", end='\n\n')
     # print(movie)
-    print("Rating : ", movie['rating'])
+    print(f"\033[7;1mRating\033[0m: {movie['rating']}", end='\n\n')
     try:
-        print(f"Runtime : {movie['runtimes'][0]} mins")
+        print(f"\033[7;1mRuntime\033[0m: {movie['runtimes'][0]} mins", end='\n\n')
     except:
         pass
-    print("imdbID : ", movie['imdbID'])
+    print(f"\033[7;1mimdbID\033[0m: {movie['imdbID']}", end='\n\n')
     cast_list = []
     for i in range(len(movie['cast'])):
         cast_list.append(movie['cast'][i])
     cast_str = ', '.join(map(str, cast_list))
-    print("Cast: ", cast_str)
+    print(f"\033[7;1mCast\033[0m: {cast_str}", end='\n\n')
     try:
         director_list = []
         for i in range(len(movie['director'])):
             director_list.append(movie['cast'][i])
         dir_str = ', '.join(map(str, director_list))
-        print("Director: ", dir_str)
+        print(f"\033[7;1mDirector\033[0m: {dir_str} ", end='\n\n')
     except:
         pass
-    print("kind : ", movie['kind'])
+    print(f"\033[7;1mkind\033[0m: {movie['kind']}", end='\n\n')
     try:
-        print("short_Overview: ", movie['plot outline'])
+        print(f"\033[7;1mshort_Overview\033[0m: {movie['plot outline']}", end='\n\n')
     except:
         pass
     try:
         movie['plot']
-        print(f"The summary plot for {movies[user_choice]['title']} is available!")
-        plot = input(f"Do you want to review the summary plot for {movies[user_choice]['title']}? Enter yes to continue or no to exit: ")
+        print(f"\033[7;1mThe summary plot for {movies[user_choice]['title']} is available!\033[0m:", end='\n\n')
+        print(f"\033[7;1mDo you want to review the summary plot for {movies[user_choice]['title']}? \033[0m:", end='\n\n')
+        plot = input(f"Do you want to review the summary plot for {movies[user_choice]['title']}? Enter yes to continue or no to exit: ", end='\n\n')
         if plot == "yes" and movie['plot'] != None:
             try:
                 plot_list = []
                 for i in range(len(movie['plot'])):
                     plot_list.append(movie['plot'][i])
                 plot_str = ', '.join(map(str, plot_list))
-                print("Plot: \n", plot_str)
+                print(f"\033[7;1mPlot\033[0m: {plot_str}", end='\n\n')
         
             except:
                 pass

@@ -79,15 +79,16 @@ def graph_implementation():
     for i in genre_list:
         print(f"{idx}) {i}")
         idx += 1
-    input_genres = input(f"Enter the integers for the genres you want in the format of space separted intergers like 1 2 3: ")
+    print(f"\033[7;1mChoose the integers for the genres you want in the format of space separted intergers like 1 2 3.\033[0m ", end='\n\n')
+    input_genres = input(f"Enter those integers in the format of space separted intergers like 1 2 3: ")
     input_genres = input_genres.split(" ")
-    # print(input_genres)
     genre = [genre_list[int(i)-1] for i in input_genres]
     idx_r = 1
     for i in rating_list:
         print(f"{idx_r}) {i}")
         idx_r += 1
-    input_rating = input(f"Enter the integers for the IMDb rating range you want in the format of space separted intergers like 1 2 3: ")
+    print(f"\033[7;1mChoose the integers for the IMDb rating range you want in the format of space separted intergers like 1 2 3.\033[0m ", end='\n\n')
+    input_rating = input(f"Enter the integers in the format of space separted intergers like 1 2 3: ")
     input_rating = input_rating.split(" ")
     rating = [rating_list[int(i)-1] for i in input_rating]
 
@@ -125,7 +126,8 @@ def graph_implementation():
     # print(final_res)
     while True:
         try:
-            user_number = input(f"How many movie recommendations do you want? Enter an integer 1-{len(final_res)}. If you want the full recommendation list, enter 'full'. To exit enter 'exit': ")
+            print(f"\033[7;1mHow many movie recommendations do you want? \033[0m ", end='\n\n')
+            user_number = input(f"Enter an integer 1-{len(final_res)}. If you want the full recommendation list, enter 'full'. To exit enter 'exit': ")
             if user_number == 'exit':
                 break
             if user_number == "full":
@@ -143,11 +145,11 @@ def graph_implementation():
                         print(f"{idx+1}) {data[data_dict_keys[int(i-1)]]['title']}- {data[data_dict_keys[int(i-1)]]['year']}")
 
                 except:
-                    wrong_in = input("Wrong input! Try again. Enter 'yes' to continue, 'exit' to exit, ")
+                    wrong_in = input(f"\033[7;1mWrong input! Try again. Enter 'yes' to continue, 'exit' to exit:\033[0m ", end='\n\n')
                     if wrong_in == "exit":
                         break
                     elif wrong_in == "yes":
                         continue
         except:
-            print("Wrong input!")
+            print(f"\033[7;1mWrong input!\033[0m", end='\n\n')
             continue

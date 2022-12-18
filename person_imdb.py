@@ -15,20 +15,22 @@ def url_image_open(url):
 
 def person_imdb():
     moviesDB = imdb.IMDb()
-    person_name = input("What is the movie/tv person you want to search a picture for? ")
+    print(f"\033[7;1mWhat is the movie/tv person you want to search a picture for?\033[0m ", end='\n\n')
+    person_name = input("Enter the name of the person: ")
     persons = moviesDB.search_person(person_name)
     for idx, movie in enumerate(persons):
         title = movie["name"]
         print(f"{idx}: {title}")
-    user_choice = int(input(f"Which person's picture you want to look at? Enter 0-{idx} integer. "))
+    print(f"\033[7;1mWhich person's picture you want to look at?\033[0m", end='\n\n')
+    user_choice = int(input(f"Enter 0-{idx} integer. "))
     try:
-        print(f"Opening picture of {persons[user_choice]}: ")
+        print(f"\033[7;1mOpening picture of {persons[user_choice]}:\033[0m ", end='\n\n')
         try:
             url = persons[user_choice]['full-size headshot']
         except:
             url = persons[user_choice]['headshot']
         url_image_open(url)
     except:
-        print("Sorry! Picture of this person unavailable!")
+        print(f"\033[7;1mSorry! Picture of this person unavailable!\033[0m", end='\n\n')
 
 
