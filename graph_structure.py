@@ -151,5 +151,3 @@ def graph_implementation():
         except:
             print("Wrong input!")
             continue
-
-graph_implementation()
