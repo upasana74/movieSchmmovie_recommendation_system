@@ -110,3 +110,31 @@ store the movie information and recommend movies to the user depending on the no
 
 On selecting this option, you can type any person's name and select the person from the search results. On choosing a particular result, the picture of that personm pops up if it is in the IMDb database.
 
+## Data Structure
+
+1. The entire movies and TV series data is stored in the form of cache in `movies_cache.json`. A visualization of the nodes connection is as follows: 
+(used python script in `nodes_visualize_adjacency_list.py` to create this plot)
+![graph_nodes_1](https://user-images.githubusercontent.com/47816217/208280044-3ee41969-417a-4991-ba6b-a5b3d9149b8f.png)
+
+2. A graph structure is used to store this dataset in order to retrieve nodes when the recommendation system is active.
+Python file that constructs the graph: `graph_structure.py` (pictures are shown step by step during explanation). I have constructed an 
+undirected graph by treating each movie as a separate child node and tokenizing each of the movies as nodes ‘c1’, ‘c2’, ‘c3’, ... etc.
+
+3. Each of the movie nodes is connected to other nodes and stored in the form of a graph. For example, each if a movie named “Lol” has genres as comedy, thriller, romance and imdb of 8.4 in the cached dataset, then node “Lol” in the form of ‘c#’ is mapped to the nodes representing genres comedy, thriller, romance in the form of ‘g#’ and also connected to the node “8.4-8.6” rating node.
+Mapping example:
+{“c#”: [g#, g#, g#, “8.4-8.6”]
+…}
+
+4. Every genre and rating is tokenized as parent nodes. Each genre is tokenized as ‘g1’, ‘g2’, ‘g3’, ….. And each rating is tokenized with respect to it’s IMDb rating range  ["8.0-8.2", "8.2-8.4", "8.4-8.6", "8.6-8.8", "8.8-9.0", "9.0-9.2"]
+
+5. Just like each child movie node is mapped to each of it’s genres and rating, each individual genre is also connected to it’s related child node. Same way each of the individual rating is mapped to it’s related child node.
+
+6. Hence each of the movie nodes are connected to it’s genre nodes and imdb rating window nodes and vice versa.
+
+The rest of the details about the graph is present in the final project report.
+
+4. 
+
+
+
+
