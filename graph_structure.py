@@ -95,6 +95,9 @@ def graph_implementation():
     inverse_genre_rating_node = invert_keys_values_dict(create_genre_rating_info_node())
 
     adj_list = create_adjacency_dict_child_nodes()
+    with open("./graph_structure_in_json.json", "w+") as f:
+        json.dump(adj_list, f, indent=1)
+
     active_list = []
     
     for gen in genre:
