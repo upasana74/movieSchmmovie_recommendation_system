@@ -54,7 +54,7 @@ def create_movie_info_node():
                                                         "genre": ...",
                                                         "kind": ...}, }
     """
-    with open('/Users/upasanathakuria/Desktop/507/SI507_final_project/top250movies.json', 'r') as file:
+    with open('./movies_cache.json', 'r') as file:
         data = json.load(file)
 
     movie_node_info = {}
@@ -70,7 +70,7 @@ def invert_keys_values_dict(original_dict):
     return new_dict
 
 def create_dict_from_json():
-    with open('/Users/upasanathakuria/Desktop/507/SI507_final_project/top250movies.json', 'r') as file:
+    with open('./movies_cache.json', 'r') as file:
         data = json.load(file)
     return data
 
@@ -120,7 +120,7 @@ def graph_implementation():
 
     #results_genre, results_rating = ["c12", "c32", "c121"], ["c32","c34"]
     final_res = list(set(results_rating) & set(results_genre)) # ["c1","c32"]
-    with open('/Users/upasanathakuria/Desktop/507/SI507_final_project/top250movies.json', 'r') as file:
+    with open('./movies_cache.json', 'r') as file:
         data = json.load(file)
     
     data_dict_keys = list(data.keys())

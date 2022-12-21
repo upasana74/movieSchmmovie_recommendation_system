@@ -99,7 +99,7 @@ def search_top_20_movies():
         movie['plot']
         print(f"\033[7;1mThe summary plot for {movies[user_choice]['title']} is available!\033[0m:", end='\n\n')
         print(f"\033[7;1mDo you want to review the summary plot for {movies[user_choice]['title']}? \033[0m:", end='\n\n')
-        plot = input(f"Do you want to review the summary plot for {movies[user_choice]['title']}? Enter yes to continue or no to exit: ", end='\n\n')
+        plot = input(f"Enter yes to continue or no to exit: ")
         if plot == "yes" and movie['plot'] != None:
             try:
                 plot_list = []

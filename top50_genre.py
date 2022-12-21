@@ -3,7 +3,7 @@ import imdb
 def movies_by_genres():
     moviesDB = imdb.IMDb()
     genre_list = ["Action", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Drama", "Fantasy", "History", "Horror", "Music", "Musical", "Mystery", "Romance", "Sci-Fi", "Sport", "Superhero", "Thriller", "War", "Western"]
-    print(f"\033[7;1m;Genres available are as follows:\033[0m ", end='\n\n')
+    print(f"\033[7;1mGenres available are as follows:\033[0m ", end='\n\n')
     idx = 1
     for i in genre_list:
         print(f"{idx}: {i}")
